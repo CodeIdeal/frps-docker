@@ -17,4 +17,4 @@ RUN apk --no-cache add wget tar \
   && chmod +x /usr/bin/frps \
   && apk del --purge wget tar
 WORKDIR /frp
-ENTRYPOINT ["/usr/bin/frps"]
+ENTRYPOINT ["/usr/bin/frps", "-c", "./frps_full.ini"]
