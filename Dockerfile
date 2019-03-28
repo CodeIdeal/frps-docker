@@ -12,7 +12,7 @@ RUN apk --no-cache add wget tar \
   && tar xf frp_${FRP_VER}_linux_${THIS_ARCH_GO}.tar.gz \
   && rm frp_${FRP_VER}_linux_${THIS_ARCH_GO}.tar.gz \
   && mv frp_${FRP_VER}_linux_${THIS_ARCH_GO}/frps /usr/bin/ \
-  && mv frp_${FRP_VER}_linux_${THIS_ARCH_GO}/frps.ini /frp/ \
+  && mv frp_${FRP_VER}_linux_${THIS_ARCH_GO}/frps_full.ini /frp/ \
   && rm -rf frp_${FRP_VER}_linux_${THIS_ARCH_GO} \
   && chmod +x /usr/bin/frps \
   && apk del --purge wget tar
